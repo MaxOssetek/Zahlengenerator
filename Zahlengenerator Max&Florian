@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Kontrollstrukturen</title>
+		
+		<script>
+			"use strict";
+			function clicked() {
+			let Zahl = document.getElementById("idZahl").value;
+            let i = 1;
+            let ausgabe = "";
+
+            while (i<=Zahl) {
+            let Quadrat = i * i;
+            ausgabe = ausgabe + "<br>" + " Die Zahl: " + i + " zum quadrat ist: " + Quadrat;
+            i = i + 1
+            }
+
+            document.getElementById("idausgabe").innerHTML = ausgabe;
+
+			}
+			
+			
+			
+		</script>
+    </head>
+
+	<body>
+		<h1>Zahlengenerator</h1>
+		Eingabe: <input id="idZahl" type="text" value="10">
+		<button onclick="clicked();">Berechne!</button><br><br>
+		<div id="idausgabe">Hier kommen die Zahlen</div>
+	
+    </body>
+</html>
